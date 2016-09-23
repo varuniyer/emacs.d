@@ -1,1 +1,1 @@
-("~/.emacs.d/")
+("~/.emacs.d/" "/Volumes/AOKP/android/system/" "/Volumes/AOKP/android/system/out/target/product/oneplus2/obj/KERNEL_OBJ/" "/Volumes/AOKP/android/system/.repo/manifests/" "/Volumes/AOKP/android/system/device/oppo/common/" "/Volumes/AOKP/android/system/device/oneplus/oneplus2/" "/Volumes/AOKP/android/system/build/" "/Volumes/Android/system/build/" "/Volumes/Android/system/kernel/oneplus/msm8994/" "/Volumes/android/system/build/" "/Volumes/android/system/art/")

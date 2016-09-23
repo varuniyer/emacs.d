@@ -6,7 +6,7 @@
 (require 'eclim)
 (global-eclim-mode)
 
-(load-theme 'monokai t)
+(load-theme 'zenburn t)
 (set-face-attribute 'default nil :font "Inconsolata-11")
 (set-frame-font "Inconsolata-11" nil t)
 
@@ -298,7 +298,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-	(emacs-eclim jdee ac-html-bootstrap ac-html edit-server jabber gnugo s angularjs-mode flycheck-google-cpplint go-mode swift-mode nlinum helm-gtags flycheck auto-complete monokai-theme zygospore undo-tree volatile-highlights smartparens yasnippet iedit ws-butler dtrt-indent comment-dwim-2 clean-aindent-mode helm-swoop helm-projectile helm ggtags duplicate-thing company anzu))))
+	(zenburn-theme emacs-eclim jdee ac-html-bootstrap ac-html edit-server jabber gnugo s angularjs-mode flycheck-google-cpplint go-mode swift-mode nlinum helm-gtags flycheck auto-complete monokai-theme zygospore undo-tree volatile-highlights smartparens yasnippet iedit ws-butler dtrt-indent comment-dwim-2 clean-aindent-mode helm-swoop helm-projectile helm ggtags duplicate-thing company anzu))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -322,7 +322,7 @@
       starttls-gnutls-program "/usr/local/bin/gnutls-cli"
       starttls-extra-arguments nil)
 (setq jabber-account-list '(
-                            ("varun.iyer.353@chat.facebook.com"
+							("varun.iyer.112358@chat.facebook.com"
                              (:network-server . "chat.facebook.com")
                              (:connection-type . starttls)
                              (:port . 5222)
@@ -330,4 +330,4 @@
 
 ;; Disable jabber.el presence notifications
 (remove-hook 'jabber-alert-presence-hooks
-             'sr-jabber-alert-presence-func)
+			 'sr-jabber-alert-presence-func)
