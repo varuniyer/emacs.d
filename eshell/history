@@ -1,0 +1,4 @@
+javac RecipeNShopping.java 
+java RecipeNShopping.java
+java RecipeNShopping
+mv bash_profile .bash_profile 
