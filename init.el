@@ -6,7 +6,7 @@
 (require 'eclim)
 (global-eclim-mode)
 
-(load-theme 'zenburn t)
+(load-theme 'monokai t)
 (set-face-attribute 'default nil :font "Inconsolata-11")
 (set-frame-font "Inconsolata-11" nil t)
 
@@ -318,16 +318,16 @@
   (setq flymake-no-changes-timeout 10)
   (add-hook 'java-mode-hook 'flymake-mode-on))
 
-(setq starttls-use-gnutls t
-      starttls-gnutls-program "/usr/local/bin/gnutls-cli"
-      starttls-extra-arguments nil)
-(setq jabber-account-list '(
-							("varun.iyer.112358@chat.facebook.com"
-                             (:network-server . "chat.facebook.com")
-                             (:connection-type . starttls)
-                             (:port . 5222)
-                             )))
+;; (setq starttls-use-gnutls t
+;;       starttls-gnutls-program "/usr/local/bin/gnutls-cli"
+;;       starttls-extra-arguments nil)
+;; (setq jabber-account-list '(
+;; 							("varun.iyer1@chat.facebook.com"
+;;                              (:network-server . "chat.facebook.com")
+;;                              (:connection-type . starttls)
+;;                              (:port . 5222)
+;;                              )))
 
-;; Disable jabber.el presence notifications
-(remove-hook 'jabber-alert-presence-hooks
-			 'sr-jabber-alert-presence-func)
+;; ;; Disable jabber.el presence notifications
+;; (remove-hook 'jabber-alert-presence-hooks
+;; 			 'sr-jabber-alert-presence-func)
