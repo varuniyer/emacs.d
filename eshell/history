@@ -2,3 +2,18 @@ javac RecipeNShopping.java 
 java RecipeNShopping.java
 java RecipeNShopping
 mv bash_profile .bash_profile 
+javac Lab08.java
+java Lab08.class 
+java Lab08
+javac HeapLab.java
+java HeapLab
+javac HeapLab.java
+javac HeapLab.java
+java HeapLab
+javac Graph.java
+javac GraphTest.java 
+java GraphTest
+javac Graph.java
+java GraphTest
+node scrape.js 
+emacs reddit.txt 
