@@ -7,8 +7,44 @@
 (ac-config-default)
 (global-auto-complete-mode)
 
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
 (add-to-list 'load-path "~/.emacs.d/auctex-ac")
 (load "auto-complete-auctex.el")
+(add-hook 'LaTeX-mode-hook 'visual-line-mode)
+;(add-hook 'LaTeX-mode-hook 'flyspell-mode)
+(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+(setq reftex-plug-into-AUCTeX t)
+(defun reload-pdf ()
+  (interactive
+  (let* ((fname buffer-file-name)
+        (fname-no-ext (substring fname 0 -4))
+        (pdf-file (concat fname-no-ext ".pdf"))
+        (cmd (format "pdflatex %s" fname)))
+    (delete-other-windows)
+    (split-window-horizontally)
+    (split-window-vertically)
+    (shell-command cmd)
+    (other-window 2)
+    (find-file pdf-file)
+    (balance-windows))))
+
+(use-package pdf-tools
+  :config
+  ;; initialise
+  (pdf-tools-install)
+  ;; open pdfs scaled to fit page
+  (setq-default pdf-view-display-size 'fit-page)
+  ;; automatically annotate highlights
+  (setq pdf-annot-activate-created-annotations t)
+  ;; use normal isearch
+  (define-key pdf-view-mode-map (kbd "C-s") 'isearch-forward))
+
+
+(global-set-key "\C-x\p" 'reload-pdf)
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 (setq x-alt-keysym 'meta)
 
