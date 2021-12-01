@@ -74,7 +74,6 @@
 (setq interprogram-cut-function 'xsel-cut-function)
 (setq interprogram-paste-function 'xsel-paste-function)
 (setq TeX-PDF-mode t)
-(setq pdf-view-resize-factor 1.1)
 
 (load-theme 'monokai t)
 (set-face-attribute 'default nil :font "Inconsolata-11")
